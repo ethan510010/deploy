@@ -1,6 +1,7 @@
 var http = require('http')
 var createHandler = require('github-webhook-handler')
-var handler = createHandler({ path: '/incoming', secret: 'test' }) 
+
+var handler = createHandler({ path: '/incoming', secret: 'sha1=test' }) 
 // 上面的 secret 保持和 GitHub 後台設置的一致
  
 function run_cmd(cmd, args, callback) {
